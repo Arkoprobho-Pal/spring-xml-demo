@@ -19,6 +19,9 @@
     </bean>
    <bean name="movieB" class="com.stackroute.domain.Movie" autowire="constructor">
    </bean>
+    <bean id="beanlifecycledemobean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+
+    </bean>
 
 
 </beans>
