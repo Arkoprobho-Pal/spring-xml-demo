@@ -12,22 +12,14 @@ import org.springframework.core.io.ClassPathResource;
 
 public class MainClass {
     public static void main(String[] args) {
-        //------------------------------------------Using ApplicationContext
-        System.out.println("-------------------------------------------Using ApplicationContext");
+
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Movie movie=context.getBean("movie",Movie.class);
         movie.ActorInfo();
-        //-------------------------------------------Using XmlbeanFactory
-        System.out.println("-------------------------------------------Using XmlbeanFactory");
-        XmlBeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
-        Movie movie1=context.getBean("movie",Movie.class);
+        Movie movie1=context.getBean("movie1",Movie.class);
         movie1.ActorInfo();
-        //-------------------------------------------BeanDefinitionRegistry and BeanDefinitionReader
-        System.out.println("-------------------------------------------BeanDefinitionRegistry and BeanDefinitionReader");
-      BeanDefinitionRegistry beanDefinitionRegistry=new DefaultListableBeanFactory();
-      BeanDefinitionReader beanDefinitionReader=new XmlBeanDefinitionReader(beanDefinitionRegistry);
-      beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
-      Movie movie2 = ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean(Movie.class);
+        Movie movie2=context.getBean("movie2",Movie.class);
         movie2.ActorInfo();
+
     }
 }
