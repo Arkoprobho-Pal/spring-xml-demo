@@ -16,10 +16,13 @@ public class MainClass {
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
         Movie movie=context.getBean("movie",Movie.class);
         movie.ActorInfo();
-        Movie movie1=context.getBean("movie1",Movie.class);
+        Movie movie1=context.getBean("movieB",Movie.class);
         movie1.ActorInfo();
-        Movie movie2=context.getBean("movie2",Movie.class);
+        System.out.println(movie==movie1);
+
+        Movie movie2=context.getBean("movieA",Movie.class);
         movie2.ActorInfo();
+        System.out.println(movie1==movie2);
 
     }
 }
