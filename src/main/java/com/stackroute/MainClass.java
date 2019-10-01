@@ -14,15 +14,11 @@ public class MainClass {
     public static void main(String[] args) {
 
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie=context.getBean("movie",Movie.class);
-        movie.ActorInfo();
-        Movie movie1=context.getBean("movieB",Movie.class);
-        movie1.ActorInfo();
-        System.out.println(movie==movie1);
+        Movie movieA=context.getBean("movieA",Movie.class);
+        movieA.ActorInfo();
+        Movie movieB=context.getBean("movieB",Movie.class);
+        movieB.ActorInfo();
 
-        Movie movie2=context.getBean("movieA",Movie.class);
-        movie2.ActorInfo();
-        System.out.println(movie1==movie2);
 
     }
 }
