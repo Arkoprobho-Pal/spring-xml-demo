@@ -1,5 +1,6 @@
 package com.stackroute;
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.support.BeanDefinitionReader;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -21,6 +22,7 @@ public class MainClass {
         Movie movieB=context.getBean("movieB",Movie.class);
         movieB.ActorInfo();
         BeanLifecycleDemoBean beanLifecycleDemoBean=context.getBean("beanlifecycledemobean",BeanLifecycleDemoBean.class);
+        BeanPostProcessorDemoBean postProcessorDemoBean=context.getBean("beanpostprocessordemobean",BeanPostProcessorDemoBean.class);
         context.registerShutdownHook();
 
     }

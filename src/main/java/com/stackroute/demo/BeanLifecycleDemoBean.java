@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
+
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("initializing bean");

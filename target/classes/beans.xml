@@ -15,12 +15,10 @@
         <constructor-arg name="gender" value="Male"/>
         <constructor-arg name="age" value="65"/>
     </bean>
-    <bean name="movieA" class="com.stackroute.domain.Movie" autowire="byName">
-    </bean>
-   <bean name="movieB" class="com.stackroute.domain.Movie" autowire="constructor">
-   </bean>
-    <bean id="beanlifecycledemobean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
-    </bean>
+    <bean name="movieA" class="com.stackroute.domain.Movie" autowire="byName"></bean>
+   <bean name="movieB" class="com.stackroute.domain.Movie" autowire="constructor"></bean>
+    <bean id="beanlifecycledemobean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
+    <bean id="beanpostprocessordemobean" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 
 
 </beans>
