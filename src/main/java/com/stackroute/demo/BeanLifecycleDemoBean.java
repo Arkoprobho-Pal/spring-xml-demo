@@ -5,7 +5,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+
 public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     @Override
     public void afterPropertiesSet() throws Exception {
@@ -16,11 +16,10 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     public void destroy() throws Exception {
         System.out.println("Bean Destroyed");
     }
-    @Bean
+
     public void customInit(){
         System.out.println("Calling CustomInit");
     }
-    @Bean
     public void customDestroy(){
         System.out.println("Calling CustomDestroy");
     }
