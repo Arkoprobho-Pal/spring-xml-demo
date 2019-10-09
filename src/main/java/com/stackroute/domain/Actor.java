@@ -16,8 +16,17 @@ public class Actor {
     public void setAge(int age) {
         this.age = age;
     }
-    public void ActorDetails(){
-        System.out.println("Name : "+name+" || Gender : "+gender+" || Age : "+age);
+
+    public void ActorDetails() {
+        System.out.println(toString());
     }
 
+    @Override
+    public String toString() {
+        return "Actor{" +
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
